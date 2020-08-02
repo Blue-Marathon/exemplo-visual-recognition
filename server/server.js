@@ -1,4 +1,4 @@
-// chamando e executando o módulo dotenv para ele pegar o conteúdo do arquivo `.emv` e criar as variáveis de ambiente necessárias para a aplicação.
+// chamando e executando o módulo dotenv, que carrega o conteúdo do arquivo `.env` e as injeta como variáveis ambiente.
 // Esse módulo é apenas necessário para o desenvolvimento do app, mas não há problemas em deixar a chamada aqui quando o mesmo for para 'produção'.
 require('dotenv').config();
 
@@ -28,7 +28,7 @@ app.use('/api', function (request, response) {
 // servindo o frontend
 app.use('/', express.static(path.resolve(__dirname, '..', 'public')));
 
-// vinculando o app a porta aonde ele será executado
+// vinculando o app a porta onde ele será executado
 app.listen(port, function () {
   console.log(`Servidor rodando na porta ${port}`);
 });
